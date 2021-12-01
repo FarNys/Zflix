@@ -1,0 +1,105 @@
+@import "../Index.scss";
+.all_theatre_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 20px 0;
+  font-family: $font_3;
+  overflow-x: scroll;
+
+  overflow-y: hidden;
+  padding: 30px 0;
+  height: 450px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 310px;
+    height: 5px;
+    border-radius: 0 5px 5px 0;
+    background: linear-gradient(90deg, $color_1, $color_2, $color_2_t);
+  }
+  color: $color_6;
+  p {
+    padding: 10px;
+    margin-left: 15px;
+    font-family: $font_3;
+  }
+}
+.single_theatre {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  //   overflow: hidden;
+  //   flex: 1;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+  transition: 0.3s ease transform;
+  &:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease transform;
+    cursor: pointer;
+  }
+  .theatre_image {
+    width: 300px;
+    height: 300px;
+    img {
+      object-fit: cover;
+      width: 300px;
+      border-radius: 25px 25px 0 0;
+      height: 300px;
+    }
+  }
+  .theatre_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: $color_1;
+    height: 50px;
+    color: $color_6;
+    font-family: $font_3;
+    border-radius: 0 0 25px 25px;
+  }
+}
+.theatre_data_container {
+  box-shadow: 0 1px 4px $color_1, 0 2px 8px $color_1_t;
+  width: 80%;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: 30px auto;
+  background: linear-gradient(90deg, $color_4, $color_7);
+  border-radius: 24px;
+  // padding: 10px;
+  .theatre_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+    margin-left: 10px;
+    .theatre_line {
+      margin: 10px 0;
+      h4 {
+        font-family: $font_1;
+        color: $color_1;
+        margin: 5px 0;
+        font-size: 1.2rem;
+      }
+      p {
+        font-family: $font_3;
+        color: $color_6;
+        line-height: 25px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../Index.scss";
+.erro_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 60px);
+  h1 {
+    color: $color_1;
+    font-family: $font_3;
+    margin: 20px 0;
+  }
+
+  img {
+    width: 50%;
+    min-width: 320px;
+  }
+  a {
+    margin: 20px 0;
+    text-decoration: none;
+    padding: 16px 24px;
+    box-shadow: 0 3px 12px $color_1_t;
+    color: $color_6;
+    font-size: 20px;
+    font-family: $font_3;
+    background-color: transparent;
+    &:hover {
+      background-color: $color_6;
+      color: $color_1;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import "../Index.scss";
+//TOP PART SEARCH
+.search_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: calc(100vh - 60px);
+  width: 100%;
+  color: $color_6;
+}
+.search_top_part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  width: 100%;
+  border: 5px slid red;
+  input {
+    width: 300px;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 24px;
+    border: 2px solid $color_6;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    color: $color_6;
+    font-family: $font_3;
+    letter-spacing: 1px;
+    &:focus {
+      outline: 2px solid $color_1;
+    }
+  }
+  .search_btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 24px;
+    transform: translateX(-50px);
+    border: none;
+    background: $color_6;
+    color: $color_3;
+    &:hover {
+      cursor: pointer;
+      color: $color_1_t;
+    }
+    &:active {
+      color: $color_1;
+    }
+  }
+}
+//SEARCH RESULT
+
+.search_result {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 30px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  h1 {
+    position: relative;
+    color: $color_1;
+    font-size: 2.5rem;
+    letter-spacing: 0.7px;
+    font-family: $font_3;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 40%;
+      height: 10px;
+      transform: skewX(-20deg);
+      background-color: $color_1;
+    }
+  }
+}
+.search_result_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 30px 0;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  a {
+    text-decoration: none;
+  }
+}
+.single_search_item {
+  width: 280px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 15px;
+  overflow: hidden;
+  border-radius: 24px;
+  transition: 0.3s ease transform;
+
+  &:hover {
+    transform: translateY(-10px);
+    transition: 0.3s ease transform;
+  }
+  .search_image_container {
+    width: 100%;
+    height: 80%;
+    flex: 0.5;
+    img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+  }
+  .search_title {
+    flex: 0.8;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $color_1;
+    font-family: $font_3;
+    color: $color_6;
+    span {
+      color: $color_6_t;
+      margin-top: 5px;
+      font-size: 0.9rem;
+    }
+  }
+}
+// lord of the ring

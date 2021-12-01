@@ -1,0 +1,8 @@
+@import "../Index.scss";
+.app_container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(90deg, $color_7, $color_4);
+  width: 100%;
+  font: $font_1;
+}

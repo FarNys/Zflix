@@ -1,0 +1,73 @@
+@import "../Index.scss";
+.footer_container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: $color_6;
+  margin-top: 50px;
+  .footer_left {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+    .footer_column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      border-right: 2px solid $color_1;
+
+      h3 {
+        font-family: $font_3;
+        color: $color_4;
+        margin-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        font-family: $font_3;
+        padding: 5px 3px;
+        margin-bottom: 5px;
+        color: $color_1;
+        &:hover {
+          color: $color_1_t;
+        }
+      }
+    }
+  }
+  .footer_right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+      font-family: $font_3;
+      padding: 20px 0;
+    }
+    .footer_icons {
+      .footer_icon {
+        cursor: pointer;
+        margin: 0 5px;
+        font-size: 2rem;
+      }
+      .footer_icon.whatsapp {
+        &:hover {
+          color: #25d366;
+        }
+      }
+      .footer_icon.telegram {
+        &:hover {
+          color: #0088cc;
+        }
+      }
+      .footer_icon.mail {
+        &:hover {
+          color: $color_1;
+        }
+      }
+    }
+  }
+}

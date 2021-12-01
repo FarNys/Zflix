@@ -1,0 +1,287 @@
+@import "../Index.scss";
+
+.navbar_container_before_login {
+  position: relative;
+  left: 0;
+  top: 0;
+  background: linear-gradient(0, $color_4, $color_4_t);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  font-family: $font_1;
+  align-items: center;
+  justify-content: flex-end;
+  button {
+    padding: 10px 16px;
+    border: 1px solid $color_6;
+    font-family: $font_3;
+    font-size: 1.1rem;
+    margin-right: 10px;
+    background-color: transparent;
+    border-radius: 12px;
+    color: $color_6;
+    &:hover {
+      border-color: $color_1;
+      cursor: pointer;
+      background-color: $color_1;
+    }
+    &:active {
+      background-color: $color_1_t;
+    }
+  }
+}
+.navbar_container {
+  position: relative;
+  left: 0;
+  top: 0;
+  background-color: $color_6;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  font-family: $font_1;
+  justify-content: space-between;
+  z-index: 100;
+  .navbar_account {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+    min-width: 50px;
+
+    .account_icon_login {
+      cursor: pointer;
+      font-family: $font_3;
+      outline: none;
+      background-color: transparent;
+      padding: 8px 12px;
+      color: $color_1;
+      border: 2px solid $color_1;
+      font-size: 1rem;
+      border-radius: 6px;
+      transition: 0.3s ease all;
+
+      &:hover {
+        background-color: $color_4;
+        transition: 0.3s ease all;
+        color: $color_6;
+        border-color: $color_1;
+      }
+      &:active {
+        background-color: $color_4_t;
+      }
+    }
+    .navbar_info {
+      position: absolute;
+      top: 100%;
+      right: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background-color: $color_4;
+      min-width: 100px;
+      color: $color_6;
+      div {
+        text-align: center;
+        padding: 10px 5px;
+        width: 100%;
+        border: 1px solid $color_6_t;
+      }
+      .logout_container {
+        &:hover {
+          background-color: $color_1;
+          cursor: pointer;
+        }
+        &:active {
+          background-color: $color_1_t;
+        }
+      }
+    }
+  }
+  .navbar_items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 10px;
+    color: $color_4;
+    align-content: flex-end;
+    a {
+      text-decoration: none;
+      color: $color_7;
+      margin-right: 20px;
+      .navbar_item_logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .svg_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .path {
+          transform: translate(10px, 10px);
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          animation: dash 3s linear forwards;
+        }
+        .circle_svg {
+          animation: circle 3s linear forwards;
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+        }
+        .path_fill {
+          animation: filler 1s linear forwards;
+        }
+      }
+    }
+  }
+
+  .navbar_account_logout {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    &:hover {
+      .login_info_container {
+        visibility: visible;
+        transform: translateY(0%);
+        opacity: 1;
+        transition: 0.1s ease all;
+      }
+    }
+    .account_icon_login {
+      cursor: pointer;
+      font-size: 32px;
+    }
+    .login_info_container {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      color: $color_6;
+      visibility: hidden;
+      transform: translateY(-7px);
+      opacity: 0.3;
+      transition: 0.1s ease all;
+
+      div {
+        border: 1px solid $color_6;
+        padding: 12px;
+        min-width: 150px;
+        text-align: center;
+      }
+      .login_name_container {
+        background-color: $color_4;
+      }
+      .logout_container {
+        background-color: $color_1;
+        &:hover {
+          background-color: $color_1_t;
+          cursor: pointer;
+        }
+        &:active {
+          color: $color_6_t;
+        }
+      }
+    }
+  }
+  .navbar_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    &:hover {
+      transition-delay: 0.2s;
+      color: $color_6;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+
+      .navbar_item_icon {
+        top: 50%;
+        opacity: 0;
+        transition: $transition_def;
+      }
+    }
+
+    .navbar_item_icon {
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      opacity: 1;
+      transition: $transition_def;
+      transform: translate(-50%, -50%);
+      font-size: 17px;
+    }
+  }
+  .navbar_item_color_top_movies {
+    &:hover {
+      background-color: $color_1;
+    }
+
+    .navbar_item_icon {
+      color: $color_1;
+    }
+  }
+  .navbar_item_color_top_series {
+    &:hover {
+      background-color: $color_9;
+    }
+    .navbar_item_icon {
+      color: $color_9;
+    }
+  }
+  .navbar_item_color_popular_movies {
+    &:hover {
+      background-color: $color_1;
+    }
+
+    .navbar_item_icon {
+      color: $color_1;
+    }
+  }
+  .navbar_item_color_popular_series {
+    &:hover {
+      background-color: $color_9;
+    }
+    .navbar_item_icon {
+      color: $color_9;
+    }
+  }
+  .navbar_item_color_theatre {
+    &:hover {
+      background-color: $color_1;
+    }
+    .navbar_item_icon {
+      color: $color_1;
+    }
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes circle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes filler {
+  to {
+    fill: $color_1;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar_container,
+  .navbar_container_before_login {
+    display: none;
+  }
+}

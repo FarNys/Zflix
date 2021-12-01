@@ -1,56 +1,79 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import "./Styles/App.scss";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+  useLocation,
+  useHistory,
+} from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import SearchPage from "./Pages/SearchPage";
+import Home from "./Pages/Home";
+import "./Styles/App.scss";
+import TopMovies from "./Pages/TopMovies";
+import TopSeries from "./Pages/TopSeries";
+import DynamicPage from "./Pages/DynamicPage";
+import Theatre from "./Pages/Theatre";
+import ErrorPage from "./Pages/ErrorPage";
+import { selectuserLogin } from "./features/firebaseSlice";
+import { ScrollToTop } from "./Components/ScrollToTop";
+import SliderMenu from "./Components/SliderMenu";
+export const apiKey = "k_i3cz6kcz";
 
 function App() {
+  const isLogin = useSelector(selectuserLogin);
+  const history = useHistory();
+  useEffect(() => {
+    if (isLogin) {
+      let x;
+
+      x = localStorage.getItem("currentLoc");
+      history.push(x);
+      console.log(x, 67);
+    }
+  }, [history, isLogin]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className="app_container">
+      {/* <Router> */}
+      {/* <ScrollToTop /> */}
+      <Navbar />
+      <SliderMenu />
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        {isLogin ? (
+          <>
+            <Route path="/top250movies">
+              <TopMovies />
+            </Route>
+            <Route path="/top250series">
+              <TopSeries />
+            </Route>
+            <Route path="/search">
+              <SearchPage />
+            </Route>
+            <Route path="/theatre">
+              <Theatre />
+            </Route>
+            <Route path="/movie/:id">
+              <DynamicPage />
+            </Route>
+          </>
+        ) : (
+          <Redirect to="/" />
+        )}
+        <Route path="*" exact>
+          <ErrorPage />
+        </Route>
+      </Switch>
+      <Footer />
+      {/* </Router> */}
     </div>
   );
 }
