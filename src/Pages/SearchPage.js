@@ -60,7 +60,6 @@ const SearchPage = () => {
     }
   };
   useEffect(() => {
-    // localStorage.setItem("currentLoc", window.location.pathname);
     inputRef.current.focus();
   }, []);
   return (

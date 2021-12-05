@@ -15,9 +15,9 @@
   align-items: center;
   margin: 40px 0;
   width: 100%;
-  border: 5px slid red;
   input {
-    width: 300px;
+    width: 30%;
+    min-width: 310px;
     height: 50px;
     padding: 0 20px;
     border-radius: 24px;
@@ -106,6 +106,7 @@
   &:hover {
     transform: translateY(-10px);
     transition: 0.3s ease transform;
+    box-shadow: 0 4px 8px 4px $color_1_t;
   }
   .search_image_container {
     width: 100%;
@@ -135,4 +136,19 @@
     }
   }
 }
-// lord of the ring
+@media (max-width: 800px) {
+  .search_top_part {
+    margin-top: 100px;
+    input {
+      position: relative;
+      left: 20px;
+    }
+    .search_btn {
+      transform: translateX(-30px);
+    }
+  }
+  .search_result_container {
+    justify-content: center;
+    padding: 0;
+  }
+}

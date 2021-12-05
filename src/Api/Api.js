@@ -1,16 +1,16 @@
 import firebase from "firebase";
 const firebaseConfig = {
-  apiKey: "AIzaSyDCwgIifGHHhyhxzqKuScfq5EVLOY9FBiM",
+  apiKey: process.env.REACT_APP_API_KEY_FIREBASE,
 
-  authDomain: "zflix-77be9.firebaseapp.com",
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
 
-  projectId: "zflix-77be9",
+  projectId: process.env.REACT_APP_PROJECT_ID,
 
-  storageBucket: "zflix-77be9.appspot.com",
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
 
-  messagingSenderId: "955273201345",
+  messagingSenderId: process.env.REACT_APP_MESSAGE_SENDER_ID,
 
-  appId: "1:955273201345:web:ddac8a13d124a2d916b640",
+  appId: process.env.APP_ID,
 };
 
 // Initialize Firebase
