@@ -3,6 +3,7 @@
   position: relative;
   min-height: 100vh;
   background: linear-gradient(90deg, $color_7, $color_4);
-  width: 100%;
-  font: $font_1;
+  // width: 100% !important;
+  font-family: $font_1;
+  overflow: hidden;
 }

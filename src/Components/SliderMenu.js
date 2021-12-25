@@ -119,7 +119,7 @@ const SliderMenu = () => {
       <div className={cssStyle ? "slider_menu_bot active" : "slider_menu_bot"}>
         {logins ? (
           <>
-            <img src={loginPhoto} />
+            <img src={loginPhoto} alt="profile-Img" />
             <span>{loginUser}</span>
           </>
         ) : (

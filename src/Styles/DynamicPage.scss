@@ -2,6 +2,7 @@
 .dynamic_container {
   position: relative;
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -26,8 +27,15 @@
       }
     }
     .dynamic_datas {
-      transform: translateY(0);
+      transform: translateY(calc(50% - 10vw));
       transition: 0.5s ease transform;
+    }
+    .dynamic_play_btn {
+      padding: 8px 12px;
+    }
+    .dynamic_line_next {
+      padding: 4px;
+      margin-top: 0;
     }
   }
   .dynamic_poster {
@@ -93,7 +101,7 @@
       background: none;
       outline: none;
       color: $color_6;
-      font-size: 20px;
+      font-size: 1.2rem;
       font-family: $font_3;
       border: none;
     }
