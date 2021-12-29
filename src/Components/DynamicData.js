@@ -15,7 +15,7 @@ const DynamicData = () => {
   const [happy, sethappy] = useState(false);
   const [sad, setsad] = useState(false);
   const getAllData = useSelector(selectAllData);
-  console.log(getAllData);
+  // console.log(getAllData);
   const sadHandler = useCallback(() => {
     sethappy(false);
     setsad(!sad);

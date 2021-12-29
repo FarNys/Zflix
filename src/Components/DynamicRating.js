@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const DynamicRating = () => {
   const [loading, setloading] = useState(false);
   const getRatings = useSelector(selectAllRating);
-  console.log(getRatings);
+  // console.log(getRatings);
   return (
     <div className="tab_inner_container">
       <div className="tab_title">

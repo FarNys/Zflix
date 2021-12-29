@@ -8,7 +8,7 @@ import { selectAwards, selectBudget } from "../features/dynamic";
 const DynamicAwards = () => {
   const getAwards = useSelector(selectAwards);
   const getBudget = useSelector(selectBudget);
-  console.log(getAwards, getBudget);
+  // console.log(getAwards, getBudget);
   return (
     <div className="tab_inner_container">
       {" "}

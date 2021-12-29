@@ -45,8 +45,8 @@ const SliderMenu = () => {
   const cssStyle = useSelector(selectCurrentCss);
   console.log(loginUser, loginPhoto, logins);
   useEffect(() => {
-    dispatch(changeToFalse);
-    console.log(959);
+    dispatch(changeToFalse());
+    // console.log(959);
   }, [id, dispatch]);
   useEffect(() => {
     // setloading(true);

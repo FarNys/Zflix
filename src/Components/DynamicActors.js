@@ -18,7 +18,7 @@ const DynamicActors = () => {
   useEffect(() => {
     setloading(true);
     setactorsData(getAllActors.slice(0, counter));
-    console.log(actorsData);
+    // console.log(actorsData);
     setloading(false);
   }, [getAllActors, loading, counter]);
   useEffect(() => {

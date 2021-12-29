@@ -71,7 +71,7 @@ const DynamicPage = () => {
         })
       );
       setsimilars(data.similars);
-      console.log(data.similars);
+      // console.log(data.similars);
       setsingleMovie(data);
       setloading(false);
     };
