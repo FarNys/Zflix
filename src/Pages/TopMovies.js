@@ -65,10 +65,10 @@ const TopMovies = () => {
       if (numbers < dataLength) {
         setgetData(getAllData.slice(0, numbers));
       }
-      console.log(getAllData, numbers);
+      // console.log(getAllData, numbers);
     }
     setloading(false);
-    console.log(getData);
+    // console.log(getData);
   }, [loading, numbers, cleanUp, getAllData]);
 
   if (loading) {

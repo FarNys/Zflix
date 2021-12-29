@@ -30,7 +30,7 @@ const SearchPage = () => {
             allSearchData: data.results,
           })
         );
-        console.log(data.results);
+        // console.log(data.results);
         setsearchData(data.results);
         setloading(false);
       };
@@ -51,7 +51,7 @@ const SearchPage = () => {
               allSearchData: data.results,
             })
           );
-          console.log(data.results);
+          // console.log(data.results);
           setsearchData(data.results);
           setloading(false);
         };

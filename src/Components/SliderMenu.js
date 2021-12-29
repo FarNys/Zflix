@@ -43,7 +43,7 @@ const SliderMenu = () => {
   const loginPhoto = useSelector(selectuserImage);
   const logins = useSelector(selectuserLogin);
   const cssStyle = useSelector(selectCurrentCss);
-  console.log(loginUser, loginPhoto, logins);
+  // console.log(loginUser, loginPhoto, logins);
   useEffect(() => {
     dispatch(changeToFalse());
     // console.log(959);

@@ -33,7 +33,7 @@ function App() {
 
       x = localStorage.getItem("currentLoc");
       history.push(x);
-      console.log(x, 67);
+      // console.log(x, 67);
     }
   }, [history, isLogin]);
 
