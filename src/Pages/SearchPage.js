@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getAllResults } from "../features/searchSlice";
 import SingleSearchItem from "../Components/SingleSearchItem";
 import Loader from "react-js-loader";
-import { proxy } from "../App";
+
 const SearchPage = () => {
   const dispatch = useDispatch();
   const [searchText, setsearchText] = useState("");
@@ -22,7 +22,7 @@ const SearchPage = () => {
       setloading(true);
       const searchFetch = async () => {
         const res = await fetch(
-          `${proxy}/https://imdb-api.com/en/API/SearchTitle/${apiKey}/${searchText}`
+          `https://imdb-api.com/en/API/SearchTitle/${apiKey}/${searchText}`
         );
         const data = await res.json();
         dispatch(
@@ -43,7 +43,7 @@ const SearchPage = () => {
         setloading(true);
         const searchFetch = async () => {
           const res = await fetch(
-            `${proxy}/https://imdb-api.com/en/API/SearchTitle/${apiKey}/${searchText}`
+            `https://imdb-api.com/en/API/SearchTitle/${apiKey}/${searchText}`
           );
           const data = await res.json();
           dispatch(

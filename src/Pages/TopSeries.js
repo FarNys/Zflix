@@ -24,7 +24,7 @@ const TopMovies = () => {
     const getAllMovies = async () => {
       try {
         const res = await fetch(
-          `${proxy}/https://imdb-api.com/en/API/Top250TVs/${apiKey}`
+          `https://cors-anywhere.herokuapp.com/https://imdb-api.com/en/API/Top250TVs/${apiKey}`
         );
         const data = await res.json();
         // console.log(data.items);
