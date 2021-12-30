@@ -4,6 +4,7 @@ import Loader from "react-js-loader";
 import "../Styles/Theatre.scss";
 import SingleTheatre from "../Components/SingleTheatre";
 import SingleTheatreData from "../Components/SingleTheatreData";
+import { proxy } from "../App";
 // https://imdb-api.com/en/API/InTheaters/k_12345678
 const Theatre = () => {
   const [loading, setloading] = useState(false);
@@ -17,7 +18,7 @@ const Theatre = () => {
     setloading(true);
     const getTheatre = async () => {
       const res = await fetch(
-        `https://imdb-api.com/en/API/InTheaters/${apiKey}`
+        `${proxy}/https://imdb-api.com/en/API/InTheaters/${apiKey}`
       );
       const data = await res.json();
       settheatreData(data.items);

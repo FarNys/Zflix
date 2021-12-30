@@ -19,7 +19,7 @@ import DynamicRating from "../Components/DynamicRating";
 import DynamicAwards from "../Components/DynamicAwards";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import DynamicSimilars from "../Components/DynamicSimilars";
-
+import { proxy } from "../App";
 const DynamicPage = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -41,7 +41,7 @@ const DynamicPage = () => {
     setcleanUp(true);
     const getSingle = async () => {
       const res = await fetch(
-        `https://imdb-api.com/en/API/Title/${apiKey}/${id}/FullActor,FullCast,Posters,Images,Trailer,Ratings,Wikipedia,`
+        `${proxy}/https://imdb-api.com/en/API/Title/${apiKey}/${id}/FullActor,FullCast,Posters,Images,Trailer,Ratings,Wikipedia,`
       );
       const data = await res.json();
       dispatch(

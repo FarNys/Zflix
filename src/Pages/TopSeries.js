@@ -6,7 +6,7 @@ import "../Styles/TopMovies.scss";
 import { apiKey } from "../App";
 import Loader from "react-js-loader";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
-
+import { proxy } from "../App";
 const TopMovies = () => {
   const dispatch = useDispatch();
   const [loading, setloading] = useState(false);
@@ -24,7 +24,7 @@ const TopMovies = () => {
     const getAllMovies = async () => {
       try {
         const res = await fetch(
-          `https://imdb-api.com/en/API/Top250TVs/${apiKey}`
+          `${proxy}/https://imdb-api.com/en/API/Top250TVs/${apiKey}`
         );
         const data = await res.json();
         // console.log(data.items);

@@ -23,6 +23,7 @@ import { selectuserLogin } from "./features/firebaseSlice";
 import { ScrollToTop } from "./Components/ScrollToTop";
 import SliderMenu from "./Components/SliderMenu";
 export const apiKey = "k_3biegoe4";
+export const proxy = "https://cors-anywhere.herokuapp.com";
 
 function App() {
   const isLogin = useSelector(selectuserLogin);

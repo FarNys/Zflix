@@ -11,7 +11,7 @@ import { apiKey } from "../App";
 import Loader from "react-js-loader";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import SearchIcon from "@mui/icons-material/Search";
-
+import { proxy } from "../App";
 const TopMovies = () => {
   const dispatch = useDispatch();
   const [loading, setloading] = useState(false);
@@ -30,7 +30,7 @@ const TopMovies = () => {
     const getAllMovies = async () => {
       try {
         const res = await fetch(
-          `https://imdb-api.com/en/API/Top250Movies/${apiKey}`
+          `${proxy}/https://imdb-api.com/en/API/Top250Movies/${apiKey}`
         );
         const data = await res.json();
         dispatch(
