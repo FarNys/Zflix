@@ -41,7 +41,7 @@ const DynamicPage = () => {
     setcleanUp(true);
     const getSingle = async () => {
       const res = await fetch(
-        `https://cors-anywhere.herokuapp.com/https://imdb-api.com/en/API/Title/${apiKey}/${id}/FullActor,FullCast,Posters,Images,Trailer,Ratings,Wikipedia,`
+        `https://imdb-api.com/en/API/Title/${apiKey}/${id}/FullActor,FullCast,Posters,Images,Trailer,Ratings,Wikipedia,`
       );
       const data = await res.json();
       dispatch(

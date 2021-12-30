@@ -22,7 +22,7 @@ import ErrorPage from "./Pages/ErrorPage";
 import { selectuserLogin } from "./features/firebaseSlice";
 import { ScrollToTop } from "./Components/ScrollToTop";
 import SliderMenu from "./Components/SliderMenu";
-export const apiKey = "k_3biegoe4";
+export const apiKey = "k_xhs2pi0r";
 export const proxy = "https://cors-anywhere.herokuapp.com";
 
 function App() {

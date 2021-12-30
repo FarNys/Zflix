@@ -30,7 +30,7 @@ const TopMovies = () => {
     const getAllMovies = async () => {
       try {
         const res = await fetch(
-          `https://cors-anywhere.herokuapp.com/https://imdb-api.com/en/API/Top250Movies/${apiKey}`
+          `https://imdb-api.com/en/API/Top250Movies/${apiKey}`
         );
 
         const data = await res.json();
